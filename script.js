@@ -12,7 +12,14 @@ function writePassword() {
 
 function generatePassword() {
   var length = prompt("How many characters would you like your password to be?");
+  // validation 
 
+  var lowercase = confirm("Press OK to include lowercase letters.");
+  var uppercase = confirm("Press OK to include uppercase letters.");
+  var numeric = confirm("Press OK to include numbers.");
+  var specialCharacters = confirm("Press OK to include special characters.");
+  // validation 
+  console.log(length, lowercase, uppercase, numeric, specialCharacters)
 }
 
 // Add event listener to generate button

@@ -20,7 +20,14 @@ function generatePassword() {
     var uppercase = confirm("Press OK to include uppercase letters.");
     var numeric = confirm("Press OK to include numbers.");
     var specialCharacters = confirm("Press OK to include special characters.");
-  // validation 
+    
+    if ((lowercase === false) && (uppercase === false) && (numeric === false) && (specialCharacters === false)) {
+      alert("Please select at least one character type.")
+      generatePassword();
+    } else {
+
+      // content
+    }
   }
 }
 

@@ -37,6 +37,8 @@ function generatePassword() {
       var characters = []; //Building array with all the characters the user wanted included
       var tempPassword = [];
 
+
+      // Adding each selected character type to our array 
       if (lowercase) {
         for (var i=0; i<lowerCharacters.length; i++) {
           characters.push(lowerCharacters[i]);
@@ -66,14 +68,14 @@ function generatePassword() {
         console.log(characters);
       }
 
-      for (i=0; i<length; i++) {
+      for (i=0; i<length; i++) { // Generate array of random characters at the specified length
         var char = characters[Math.floor(Math.random()*characters.length)];
         tempPassword.push(char);
       }
 
       console.log(tempPassword);
 
-      password = tempPassword.join("");
+      password = tempPassword.join(""); // Convert array to string
       console.log(password);
       return password;
     
